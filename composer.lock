@@ -1,0 +1,11 @@
+{
+    "hash": "c1dfab8bb894d1e07c6b182bc102c01c",
+    "packages": [
+        {
+            "package": "pomm/pomm",
+            "version": "dev-master",
+            "source-reference": "bdc63106b8c46674d7382182c52d919a59a52764"
+        }
+    ],
+    "aliases": []
+}
