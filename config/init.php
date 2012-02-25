@@ -10,4 +10,7 @@ $service = new Pomm\Service(
         )
 ));
 
+$service->getDatabase('default')
+    ->registerConverter('Point', new Pomm\Converter\PgPoint(), array('point'));
+
 return $service;
