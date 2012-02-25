@@ -7,6 +7,15 @@ $connection = $service
     ->getDatabase()
     ->createConnection();
 
+$logger = new Pomm\Tools\Logger();
+$connection
+  ->registerFilter(new Pomm\FilterChain\LoggerFilter($logger));
+register_shutdown_function(function() use ($logger) {
+    $fh = fopen(__DIR__.'/../sql.logs', 'a+');
+    fwrite($fh, print_r($logger->getLogs(), true));
+    fclose($fh);
+});
+
 $city_map = $connection
     ->getMapFor('Greg\Weather\City');
 
