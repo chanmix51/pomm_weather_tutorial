@@ -6,7 +6,7 @@ $loader->add('Greg', __DIR__."/../model");
 $service = new Pomm\Service(
     array(
         'default' => array(
-            'dsn' => sprintf('pgsql://greg/greg', __DIR__)
+            'dsn' => 'pgsql://greg/greg'
         )
 ));
 
