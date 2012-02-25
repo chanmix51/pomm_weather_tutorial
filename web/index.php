@@ -10,7 +10,7 @@ $connection = $service
 $city_map = $connection
     ->getMapFor('Greg\Weather\City');
 
-$cities = $city_map->findAll();
+$cities = $city_map->findWhere('true', array(), 'ORDER BY name ASC');
 
 if (isset($_GET['city'])) {
     $selected_cities = $city_map
