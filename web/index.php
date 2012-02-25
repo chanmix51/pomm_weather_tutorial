@@ -54,7 +54,7 @@ if (isset($_GET['city'])) {
 <ul>
 <?php foreach($selected_cities as $city): ?>
 <?php if ($selected_cities->isFirst()) continue ?>
-<li><a href="?city=<?php echo $city->get('name') ?>"><?php echo $city['name'] ?></a> (<?php echo $city['weather_probe']['temperature'] ?> celsius)</li>
+<li><a href="?city=<?php echo $city->get('name') ?>"><?php echo $city['name'] ?></a> <?php echo $city['distance'] ?> km (<?php echo $city['weather_probe']['temperature'] ?> celsius)</li>
 <?php endforeach ?>
 </ul>
 </div>
