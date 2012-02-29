@@ -33,4 +33,11 @@ EOSQL;
 
         return $this->query($sql, array($city_name, $limit + 1));
     }
+
+    public function findAllName()
+    {
+        $sql = sprintf("SELECT name FROM %s ORDER BY name ASC", $this->getTableName());
+
+        return $this->query($sql);
+    }
 }

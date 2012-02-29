@@ -19,7 +19,7 @@ register_shutdown_function(function() use ($logger) {
 $city_map = $connection
     ->getMapFor('Greg\Weather\City');
 
-$cities = $city_map->findWhere('true', array(), 'ORDER BY name ASC');
+$cities = $city_map->findAllName();
 
 if (isset($_GET['city'])) {
     $selected_cities = $city_map
